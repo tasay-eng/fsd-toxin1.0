@@ -1,0 +1,12 @@
+mixin arrow()
+    div(class="select-side")
+        i(class="fas fa-chevron-down")
+mixin simple_drop_down(select_name, first_option)
+    div(class= 'rail-select')
+        select(id= select_name name= select_name)
+            option(selected= 'selected')= first_option
+mixin drop_down(select_label, select_name, first_option)
+    div(class= 'rail-select')
+        label(for= select_name)= select_label
+        select(id= select_name name= select_name)
+            option(selected= 'selected')= first_option

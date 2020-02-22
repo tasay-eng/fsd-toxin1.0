@@ -1,0 +1,33 @@
+// main: main.less
+@import '../../config/config.less';
+@import "../small.blocks/button/button.less";
+.header-main {
+  box-sizing: border-box;
+  max-width: 1440px;
+  height: 7.78%;
+  margin: 0 9.72%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  &_item {
+    .toxin_label();
+    &:nth-child(2) {
+      width: 70%;
+      margin-left: 6.94%;
+      list-style-type: none;
+      li {
+        &:nth-child(7) input{
+          width: 87px;
+          .button_com(@purple);
+          .button(@purple)
+        }
+        &:nth-of-type(8) input{
+          width: 196px;
+          .button_com(@white);
+          .button(@white)
+        }
+      }
+
+    }
+  }
+}

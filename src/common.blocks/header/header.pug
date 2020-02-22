@@ -1,0 +1,15 @@
+include ../small.blocks/input/input.js
+include ../small.blocks/dropdown/dropdown.pug
+include ../small.blocks/label/label.pug
+mixin header()
+    - var header_options = ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation']
+    header(class= 'header-main')
+        +label()
+        ul(class='header-main_item')
+            each option in header_options
+                li
+                    a= option
+            li
+                +input_field('simple','login', 'button', 'LOGIN')
+            li
+                +input_field('simple', 'registration', 'button', 'REGISTER')

@@ -1,0 +1,16 @@
+mixin room_card(card_name)
+    div(class= card_name)
+        ul(id='lightSlider' class='#{card_name}_item lightSlider')
+            li.slide
+                div.myslide
+                    h1 Hello
+                    img(src= './img/card_picture.jpeg')
+            li.slide
+                div.myslide
+                    h1 Hello
+                    img(src= './img/card_picture1.jpg')
+        div(class='#{card_name}_item')
+            p text
+            p sum
+            div.rating
+            p text

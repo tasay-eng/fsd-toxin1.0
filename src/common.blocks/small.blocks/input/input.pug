@@ -1,0 +1,4 @@
+mixin input_field(kind, input_name, input_type, holder)
+    if (kind === 'comple')
+        label(for=input_name)= input_name
+    input(id=input_name type=input_type name=input_name placeholder=holder)

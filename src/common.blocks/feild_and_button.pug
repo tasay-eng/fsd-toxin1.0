@@ -1,0 +1,38 @@
+mixin input_field(input_name, input_type, placeholder)
+    if (input_type === 'radio')
+        label(for=input_name)= input_name
+        input(id=input_name type=input_type name=input_name value=input_value)
+    else
+        label(for=input_name)= input_value
+        input(id=input_name type=input_type name=input_name value=input_value)
+
+mixin simple_input(input_name, input_type, input_value)
+    input(type=input_type name=input_name value=input_value)
+mixin simple_drop_down(form_name, select_name, first_option)
+    select(id= select_name name= select_name)
+        option(selected= 'selected')= first_option
+mixin drop_down(form_name, select_label, select_name, first_option)
+    div(class= form_name + '__item')
+        label(for= select_name)= select_label
+        select(id= select_name name= select_name)
+            option(selected= 'selected')= first_option
+
+mixin options(content)
+    option
+        div= content
+        div
+            +simple_input
+            p
+            +simple_input
+mixin info(item_name, source)
+    div(class= "#{item_name}")
+        img(src= source)
+    div(class= "#{item_name}")
+        h4
+        p
+
+mixin comment(source, input_type, input_name, input_value)
+    div.comment
+        +info()
+        +simple_input()
+        p text

@@ -1,0 +1,27 @@
+@import 'config/config.less';
+@import 'common.blocks/header/header.less';
+@import "common.blocks/footer/footer.less";
+@import "common.blocks/search-form/search-form.less";
+
+body {
+  max-width: 1920px;
+  min-width: 320px;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  .body_text;
+  .wrapper {
+    .container(absolute);
+    height: 830px;
+    background: url('../public/img/landing.png');
+    p {
+      width: 297px;
+      line-height: 24px;
+      text-align: right;
+      vertical-align: bottom;
+      margin-bottom: 18px;
+      margin-right: 135px;
+      margin-left: 1009px;
+    }
+  }
+}

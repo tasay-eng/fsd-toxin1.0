@@ -1,0 +1,15 @@
+extends ../template-page/template.pug
+append config
+    include ../../config/config
+    - pageName = 'Главная страница'
+    - pageDesc = 'Страница 1'
+
+block content
+    include ../../common.blocks/header/header.pug
+    include ../../common.blocks/search-form/search-form.pug
+    include ../../common.blocks/footer/footer.pug
+    +header()
+    div.wrapper
+        +search_form('search-room-small')
+        p Лучшие номера для вашей работы, отдыха и просто вдохновения
+    +footer()

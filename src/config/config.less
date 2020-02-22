@@ -1,0 +1,115 @@
+// main: main.less
+@import (css) url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@titles: #1F2041;
+@text_dark: rgba(31, 32, 65, 0.75);
+@text_middle: rgba(31, 32, 65, 0.5);
+@text_light: rgba(31, 32, 65, 0.25);
+@light_shadow: rgba(31, 32, 65, 0.05);
+@buttons: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+@purple: #BC9CFF;
+@green: #6FCF97;
+@white: #FFFFFF;
+
+
+.body_text() {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 171%;
+  color: @text_dark;
+}
+.clear() {
+  margin: 0;
+  padding: 0;
+}
+.button_com(@col) {
+  color: @col;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  border-radius: 22px;
+  text-transform: uppercase;
+  height: 44px;
+}
+.button(@col) when (@col = @purple) {
+  height: 32px;
+  border: 2px solid @col;
+  background: @white;
+}
+.button(@col) when (@col = @white) {
+  border: none;
+  border-radius: 22px;
+  height: 34px;
+  background: @buttons;
+}
+
+.text-field() {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.big_field() {
+  width: 90%;
+}
+.mid_field() {
+  width: 70%;
+}
+.small_field() {
+  width: 40%;
+}
+.center_form() {
+  margin: 4% 0;
+  padding: 6% 5%;
+
+}
+.header_1() {
+  font-size: 24px;
+  line-height: 30px;
+  color: @titles;
+  font-weight: bold;
+}
+.header_2() {
+  font-size: 19px;
+  line-height: 24px;
+  color: @titles;
+  font-weight: bold;
+}
+.header_3() {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: @titles;
+  font-weight: bold;
+}
+.toxin_label() {
+  display: flex;
+  justify-content: space-between;
+  &:nth-child(1){
+    align-items: center;
+    img:nth-child(2) {
+      padding-left: 12.5px;
+    }
+  }
+}
+.inp_sel(){
+  border: 1px solid @text_light;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 44px;
+  font-size: 14px;
+}
+.form() {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.flex() {
+  display: flex;
+  justify-content: space-between;
+}
+.container(@position) {
+  max-width: 1440px;
+  box-sizing: border-box;
+  position: @position;
+}

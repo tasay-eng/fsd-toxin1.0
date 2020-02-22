@@ -7,11 +7,17 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: {
         main: './src/main.js',
-        'landing-page': './src/app/datapicker.js'
+        'landing-page': './src/pages/landing-page/landing-page.js',
+        'search-page': './src/pages/search-page/search-page.js'
+
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
+    },
+    resolve: {
+        modules: ['src/common.blocks', 'src/config', 'src/template-page', './node_modules'],
+        extensions:['.js','.pug'],
     },
     optimization: {
         splitChunks: {
@@ -55,7 +61,7 @@ module.exports = {
             {
                 test: /\.pug$/,
                 exclude: /node_modules/,
-                use:  ['pug-loader']
+                use:  ['file-loader?name = [path][name].html & context =./common.blocks', 'pug-loader?pretty&exports=false']
             },
             {
                 test: /\.(jpg|png|svg)$/,
@@ -72,18 +78,17 @@ module.exports = {
             chunks: [ 'main' ]
         }),
         new HtmlWebpackPlugin({
-            template: './src/public/pug/search-page.pug',
-            chunks: ['main'],
+            template: './src/pages/search-page/search-page.pug',
+            chunks: ['main', 'search-page'],
             filename: './search-page.html'
         }),
         new HtmlWebpackPlugin({
-            template: './src/public/pug/landing-page.pug',
-            chunks: ['main'],
+            template: './src/pages/landing-page/landing-page.pug',
+            chunks: ['main', 'landing-page'],
             filename: './landing-page.html'
         }),
         new CopyWebpackPlugin([
-            { from: './src/public/img', to: `./img`},
-            { from: './src/public/javascript', to: `./public` },
+            { from: './src/img', to: `./img`},
             { from: './node_modules/jquery', to: `./node_modules/jquery`},
             { from: './node_modules/jquery-ui', to: `./node_modules/jquery-ui`}
             ]

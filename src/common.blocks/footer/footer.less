@@ -1,0 +1,71 @@
+// main: main.less
+@import '../../config/config.less';
+@import "../small.blocks/input/input.less";
+@import "../small.blocks/label/label.less";
+.footer {
+  .container(absolute);
+  margin: 0 auto;
+  padding: 0 140px;
+  bottom: -60%;
+  &__info {
+    .flex();
+    .item {
+      flex: 1 108px;
+      h1 {
+        .header_3();
+      }
+      &:nth-child(1) {
+        flex: 2.4 108px;
+      }
+      &:nth-child(1) {
+        margin-right: 40px;
+      }
+      &:nth-child(2){
+        flex: 1.324 108px;
+        margin-right: 57px;
+      }
+      &:nth-child(4){
+        flex: 1.38 108px;
+        margin-right: 92px;
+        margin-left: 51px;
+      }
+      &:nth-child(5) {
+        flex: 2.4 108px;
+        input {
+          width: 260px;
+        }
+      }
+      ul {
+        list-style-type: none;
+        li{
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+  &-social {
+    .flex();
+    padding: 15px 0;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      border-top: 2px solid grey;
+      max-width: 1440px;
+    }
+    &__item {
+      &:nth-child(2){
+        list-style-type: none;
+        width: 112px;
+        .clear();
+        .flex();
+        li {
+          i {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}

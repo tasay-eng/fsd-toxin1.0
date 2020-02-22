@@ -1,0 +1,1 @@
+import '../small.blocks/input/input.js'

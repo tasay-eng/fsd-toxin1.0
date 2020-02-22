@@ -1,0 +1,33 @@
+include ../small.blocks/input/input.pug
+include ../small.blocks/label/label.pug
+mixin footer()
+    - var footer_list = {'nav': ['Navigation', 'About Us', 'News', 'Support', 'Products'], 'about': ['About Us', 'Who we are', 'Our team', 'Careers', 'Investors'], 'support': ['Support', 'Documentation', 'Community', 'Get in Touch'], 'subscribe': ['Subscribe to our newsletter', 'Receive our latest news and promotions in your inbox!']}
+    footer.footer
+        div.footer__info
+            div(class= 'item main')
+                +label()
+                p
+                    | Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+            for val, key in footer_list
+                div(class= 'item' + ' ' + key)
+                    ul
+                        li
+                            h3= val[0]
+                        - for (var i = 1; i < val.length; i++)
+                        li
+                            a= val[i]
+                        if ((key === 'subscribe') && (i === 1))
+                            li
+                                +input_field('simple', 'email', 'text', 'Email')
+                                i(class="fas fa-arrow-right")
+
+
+        div.footer-social
+            p.footer-social__item Copyright © 2018 Toxin UI Kit. All rights reserved.
+            ul.footer-social__item
+                li
+                    i(class="fab fa-twitter")
+                li
+                    i(class="fab fa-facebook-square")
+                li
+                    i(class="fab fa-instagram")

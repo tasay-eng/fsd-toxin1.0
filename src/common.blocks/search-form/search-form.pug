@@ -1,0 +1,24 @@
+include ../small.blocks/input/input.pug
+include ../small.blocks/dropdown/dropdown.pug
+mixin search-form(form_name)
+    - var search_form_detailes= {'9 990₽ х 4 суток': '39 960₽', 'Сбор за услуги: скидка 2 179₽': '0₽', 'Сбор за дополнительные услуги': '300₽', 'Итого': '38 081₽'}
+    form(class= form_name action= "url" method="post")
+        if (form_name==='search-room')
+            h1 Найдём номера под ваши пожелания
+        else
+            div(class= 'search-room-big')
+                div
+                    img(src='#')
+                    h3= 'люкс'
+                p 9 990₽ в сутки
+        +drop_down('Прибытие', 'arrival', 'ДД.ММ.ГГГГ')
+        +drop_down("Выезд", 'departure', 'ДД.ММ.ГГГГ')
+        +drop_down("Гости", 'guests', 'Сколько гостей')
+        if (form_name==='search-room')
+            +input_field('simple', 'choose-room', 'button', 'подобрать номер')
+        else
+            each service, sum in search_form_detailes
+                div(class= 'search-room-big')
+                    p= service
+                    p= sum
+                +input_field('simple', 'book', 'button', 'забронировать')

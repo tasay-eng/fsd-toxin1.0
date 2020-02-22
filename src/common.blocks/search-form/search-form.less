@@ -1,0 +1,42 @@
+// main: main.less
+@import '../../config/config.less';
+@import "../small.blocks/dropdown/dropdown.less";
+@import "../small.blocks/button/button.less";
+.search-room {
+  position: relative;
+  max-width: 380px;
+  max-height: 374px;
+  background: @white;
+  padding: 40px 30px 30px 30px;
+  .flex();
+  flex-wrap: wrap;
+  .form();
+  h1 {
+    .header_1();
+    padding-bottom: 5.53%;
+    width: 84.21%;
+    margin: 0;
+  }
+  &__item {
+    padding-bottom: 20.56px;
+    width: 320px;
+
+    &:nth-child(2), &:nth-child(3) {
+      select {
+        width: 150px;
+      }
+    }
+    &:nth-child(4){
+      select {
+        width: 320px;
+      }
+    }
+  }
+  input {
+    .button_com(@white);
+    .button(@white);
+    padding-top: 4.44px;
+    border-radius: 22px;
+    width: 320px;
+  }
+}

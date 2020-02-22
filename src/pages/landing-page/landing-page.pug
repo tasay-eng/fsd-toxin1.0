@@ -1,15 +1,16 @@
 extends ../template-page/template.pug
 append config
-    include ../../config/config
-    - pageName = 'Главная страница'
-    - pageDesc = 'Страница 1'
-
-block content
+    include ../../config/config.pug
     include ../../common.blocks/header/header.pug
     include ../../common.blocks/search-form/search-form.pug
     include ../../common.blocks/footer/footer.pug
+    - pageName = 'Главная страница'
+    - pageDesc = 'Страница 1'
+block header
     +header()
+block content
     div.wrapper
-        +search_form('search-room-small')
+        +search-form('search-room')
         p Лучшие номера для вашей работы, отдыха и просто вдохновения
+block footer
     +footer()

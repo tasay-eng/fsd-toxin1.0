@@ -1,0 +1,16 @@
+extends ../template-page/template.pug
+append config
+    include ../../config/config.pug
+    include ../../common.blocks/header/header.pug
+    include ../../common.blocks/login-form/login-form.pug
+    include ../../common.blocks/registration-form/registration-form.pug
+    include ../../common.blocks/footer/footer.pug
+    - pageName = 'Главная страница'
+    - pageDesc = 'Страница 7'
+block header
+    +header()
+block content
+    div.wrapper
+        +registration-form('registration-form')
+block footer
+    +footer()

@@ -8,16 +8,13 @@ module.exports = {
     entry: {
         main: './src/main.js',
         'landing-page': './src/pages/landing-page/landing-page.js',
-        'search-page': './src/pages/search-page/search-page.js'
+        'search-page': './src/pages/search-page/search-page.js',
+        'sign-up-page': './src/pages/sign-up-page/sign-up-page.js'
 
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
-    },
-    resolve: {
-        modules: ['src/common.blocks', 'src/config', 'src/template-page', './node_modules'],
-        extensions:['.js','.pug'],
     },
     optimization: {
         splitChunks: {
@@ -61,7 +58,7 @@ module.exports = {
             {
                 test: /\.pug$/,
                 exclude: /node_modules/,
-                use:  ['file-loader?name = [path][name].html & context =./common.blocks', 'pug-loader?pretty&exports=false']
+                use:  ['pug-loader']
             },
             {
                 test: /\.(jpg|png|svg)$/,
@@ -76,6 +73,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: './style.css',
             chunks: [ 'main' ]
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/sign-up-page/sign-up-page.pug',
+            chunks: ['main', 'sign-up-page'],
+            filename: './sign-up-page.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/pages/search-page/search-page.pug',

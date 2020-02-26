@@ -13,13 +13,13 @@ mixin footer()
                     ul
                         li
                             h3= val[0]
-                        - for (var i = 1; i < val.length; i++)
-                        li
-                            a= val[i]
-                        if ((key === 'subscribe') && (i === 1))
+                        - for ( var i = 1; i < val.length; i++ )
                             li
-                                +input_field('simple', 'email', 'text', 'Email')
-                                i(class="fas fa-arrow-right")
+                                a= val[i]
+                            if ((key === 'subscribe') && (i === 1))
+                                li
+                                    +simple_input('email', 'subscribe', 'Your email address')
+                                    i(class="fas fa-arrow-right")
 
 
         div.footer-social

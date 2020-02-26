@@ -1,16 +1,18 @@
-mixin room_card(card_name)
-    div(class= card_name)
-        ul(id='lightSlider' class='#{card_name}_item lightSlider')
-            li.slide
-                div.myslide
-                    h1 Hello
-                    img(src= './img/card_picture.jpeg')
-            li.slide
-                div.myslide
-                    h1 Hello
-                    img(src= './img/card_picture1.jpg')
-        div(class='#{card_name}_item')
-            p text
+mixin room-card(card_id)
+    - var images = ['./img/card_picture1.jpg']
+    div(class= 'room-card' id= card_id)
+        ul(id='lightSlider')
+            - for (var i in images)
+                li.slide
+                    div.myslide
+                        img(src= images[i])
+        div(class= 'inform')
+            - var n = 'fa fa-star'
+            p number
             p sum
             div.rating
-            p text
+                ul.stars
+                    - for (var j = 0; j < 5; j++)
+                        li
+                            i(class= n)
+                p come-back

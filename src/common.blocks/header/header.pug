@@ -1,4 +1,4 @@
-include ../small.blocks/input/input.js
+include ../small.blocks/button/button.pug
 include ../small.blocks/dropdown/dropdown.pug
 include ../small.blocks/label/label.pug
 mixin header()
@@ -10,6 +10,6 @@ mixin header()
                 li
                     a= option
             li
-                +input_field('simple','login', 'button', 'LOGIN')
+                +button('login', 'LOGIN')
             li
-                +input_field('simple', 'registration', 'button', 'REGISTER')
+                +button('registration', 'REGISTER')

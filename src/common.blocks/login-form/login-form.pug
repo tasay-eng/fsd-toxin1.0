@@ -1,8 +1,10 @@
+include ../small.blocks/input/input.pug
+include ../small.blocks/button/button.pug
 mixin login_form(form_name)
     form(class= form_name action= "url" method="post")
-        h1
+        h1 Войти
         +simple_input('text', 'userName', 'Имя')
-        +simple_input('text', 'userSurname', 'Фамилия')
-        +simple_input('button', 'submit', 'value_purple_button')
-        p
-        +simple_input('button', 'name', 'value_wight_button')
+        +simple_input( 'text', 'userSurname', 'Фамилия')
+        +button('sign-in', 'войти')
+        p Нет аккаунта на Toxin?
+        +button('sign-up', 'сщздать')

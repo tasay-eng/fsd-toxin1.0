@@ -1,0 +1,17 @@
+include ../small.blocks/checkbox/checkbox.pug
+include ../small.blocks/dropdown/dropdown.pug
+mixin choose-options()
+    div.choose-options
+        +drop_down('даты пребывания в отеле', 'date-range', '2 спальни, 2 кровати...')
+        +drop_down('гости', 'guests', 'Сколько гостей')
+        div.oppotunities
+            label= 'Checkbox Buttons'
+            +checkbox_complex('smoking',  'Можно курить')
+            +checkbox_complex('pets',  'Можно с питомцами')
+            +checkbox_complex('invite',  'Можно пригласить гостей (до 10 человек)')
+        div.availablity
+            label= 'Доступность'
+            +checkbox_complex('corridor', 'Широкий коридор')
+            +checkbox_complex('disabled', 'Помощник для инвалидов')
+        +drop_down('удобства номера', 'facilities', '2 спальни, 2 кровати...')
+        +drop_down('дополнительные удобства', 'additional', 'дополнительные удобства')

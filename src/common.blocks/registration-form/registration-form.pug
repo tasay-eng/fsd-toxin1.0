@@ -1,15 +1,21 @@
-mixin registration_form(form_name)
+include ../small.blocks/input/input.pug
+include ../small.blocks/button/button.pug
+mixin registration-form(form_name)
     form(class= form_name action= "url" method="post")
-        h1 #{title_card}
+        h1 Регистрация аккаунта
         +simple_input('text', 'userName', 'Имя')
         +simple_input('text', 'userSurname', 'Фамилия')
         div.radio_buttons
-            +input_field(form_name, 'sex', 'radio', 'Мужчина')
-            +input_field(form_name, 'sex', 'radio', 'Женщина')
-        +input_field(form_name, 'Дата рождения', 'text', 'ДД.ММ.ГГГГ')
-        +input_field(form_name, 'Данные для входа в сервис', 'text', 'Email')
-        +simple_input('пароль', 'text', 'Пароль')
-        +simple_input('checkbox', 'соглашение на рассылку', 'Получать спецпредложения')
-        +simple_input('button', 'submit', 'value_purple_button')
-        p #{p_text}
-        +simple_input('button', 'name', 'value_wight_button')
+            +simple_input('radio', 'sex', 'Мужчина')
+            +simple_input('radio', 'sex',  'Женщина')
+        +input_field('date', 'birth-date', 'ДД.ММ.ГГГГ', 'Дата рождения')
+        div.sign-in-service
+            label(for='email') данные для входа в сервис
+            +simple_input('email', 'email', 'Email')
+            +simple_input('password', 'password', 'Пароль')
+        div.toggle
+            +simple_input('checkbox', 'agree', 'Получать спецпредложения')
+            span(class="slider")
+       +button('sign-up', 'перейти к оплате')
+            p Уже есть аккаунт на Toxin
+            +button('sign-in', 'войти')

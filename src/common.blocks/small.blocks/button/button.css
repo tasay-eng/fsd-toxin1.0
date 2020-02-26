@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+input {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  height: 44px;
+  border: none;
+  height: 34px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  padding-top: 4.44px;
+  border-radius: 22px;
+}
+/*# sourceMappingURL=button.css.map */

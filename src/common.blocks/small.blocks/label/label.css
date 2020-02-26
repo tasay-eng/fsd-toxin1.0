@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+.label {
+  width: 105.7px;
+  display: flex;
+  justify-content: space-between;
+}
+.label:nth-child(1) {
+  align-items: center;
+}
+.label:nth-child(1) img:nth-child(2) {
+  padding-left: 12.5px;
+}
+/*# sourceMappingURL=label.css.map */

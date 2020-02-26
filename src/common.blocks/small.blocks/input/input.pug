@@ -1,4 +1,6 @@
-mixin input_field(kind, input_name, input_type, holder)
-    if (kind === 'comple')
-        label(for=input_name)= input_name
-    input(id=input_name type=input_type name=input_name placeholder=holder)
+mixin input_field(type, input_id, holder, input_label)
+    div.complex-input
+        label(for=input_id)= input_label
+        input(class= 'input-text' id=input_id type=type name=input_id value= holder)
+mixin simple_input(type, input_id, holder)
+    input(class= 'input-text' id=input_id type= type name=input_id value=holder)

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+input {
+  color: #BC9CFF;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  border-radius: 22px;
+  text-transform: uppercase;
+  height: 44px;
+  height: 32px;
+  border: 2px solid #BC9CFF;
+  background: #FFFFFF;
+}
+/*# sourceMappingURL=button_purple.css.map */

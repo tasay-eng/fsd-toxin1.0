@@ -1,0 +1,6 @@
+mixin checkbox_complex(input_id, input_label)
+    div.checkbox-complex
+        label(for=input_id)= input_label
+        input(class= 'check' id=input_id type=checkbox name=input_id)
+mixin checkbox(input_id)
+    input(class= 'check' id=input_id type=checkbox name=input_id)

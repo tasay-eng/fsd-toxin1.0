@@ -1,25 +1,19 @@
 extends ../template-page/template.pug
 append config
     include ../../config/config
+    include ../../common.blocks/header/header.pug
+    include ../../common.blocks/footer/footer.pug
+    include ../../common.blocks/choose-options/choose-options.pug
+    include ../../common.blocks/room-card/room-card.pug
     - pageName = 'Страница выбора номера'
     - pageDesc = 'Страница 3'
+block header
+    +header('header-main')
 block content
-    include ../../common.blocks/header/header.pug
-    include ../../common.blocks/search-form/search-form.pug
-    include ../../common.blocks/footer/footer.pug
-    +header('header_main')
-    div.choose-options
-        +drop_down('choose-options', 'даты пребывания в отеле', 'date-range', '2 спальни, 2 кровати...')
-        +drop_down('choose-options', 'гости', 'guests', 'Сколько гостей')
-        div.oppotunities
-            label= 'Checkbox Buttons'
-            +simple_input( 'smoking', 'checkbox', 'Можно курить')
-            +simple_input( 'pets', 'checkbox', 'Можно с питомцами')
-            +simple_input( 'invite', 'checkbox', 'Можно пригласить гостей (до 10 человек)')
-        div.availablity
-            label= 'Доступность'
-            +simple_input( 'corridor', 'checkbox', 'Широкий коридор')
-            +simple_input( 'disabled', 'checkbox', 'Помощник для инвалидов')
-        +drop_down('choose-options', 'удобства номера', 'facilities', '2 спальни, 2 кровати...')
-        +drop_down('choose-options', 'дополнительные удобства', 'facilities', 'дополнительные удобства')
+    +choose-options()
     div.room-cards
+        h1 Номера, которые мы для вас подобрали
+        - for (var i = 0; i < 12; i++)
+            +room-card()
+block footer
+    +footer()

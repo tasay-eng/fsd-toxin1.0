@@ -1,0 +1,10 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch .check {
+  display: none;
+}
+/*# sourceMappingURL=toggle.css.map */

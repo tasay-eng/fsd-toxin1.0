@@ -96,8 +96,10 @@
   border-radius: 4px;
   height: 44px;
   font-size: 14px;
+  color: @text_dark;
 }
 .form() {
+  background: @white;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -108,10 +110,12 @@
   justify-content: space-between;
 }
 .container(@position) {
-  max-width: 1440px;
+  width: 100%;
   box-sizing: border-box;
   position: @position;
 }
 .lists{
   list-style-type: none;
+}
+.toggle(input) when (checked) {
 }

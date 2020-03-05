@@ -61,10 +61,10 @@ module.exports = {
                 use:  ['pug-loader']
             },
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.(jpg|png|svg|jpeg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'images/[name].[ext]'
+                    name: 'img /[name].[ext]'
                 }
             }
         ]
@@ -90,7 +90,7 @@ module.exports = {
             filename: './landing-page.html'
         }),
         new CopyWebpackPlugin([
-            { from: './src/img', to: `./img`},
+            {from: './src/img', to: "./img"},
             { from: './node_modules/jquery', to: `./node_modules/jquery`},
             { from: './node_modules/jquery-ui', to: `./node_modules/jquery-ui`}
             ]

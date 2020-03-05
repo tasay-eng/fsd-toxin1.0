@@ -1,21 +1,23 @@
 include ../small.blocks/input/input.pug
 include ../small.blocks/button/button.pug
-mixin registration-form(form_name)
-    form(class= form_name action= "url" method="post")
+include ../small.blocks/radio-button/radio-button.pug
+include ../small.blocks/checkbox/checkbox.pug
+include ../small.blocks/toggle/toggle.pug
+mixin registration-form(form_class)
+    form(class= 'registration-form'+ ' ' + form_class  action= "url" method="post")
         h1 Регистрация аккаунта
         +simple_input('text', 'userName', 'Имя')
         +simple_input('text', 'userSurname', 'Фамилия')
         div.radio_buttons
-            +simple_input('radio', 'sex', 'Мужчина')
-            +simple_input('radio', 'sex',  'Женщина')
+            +radio-button('radio-man', 'sex', 'man', 'Мужчина')
+            +radio-button('radio-woman', 'sex', 'woman', 'Женщина')
         +input_field('date', 'birth-date', 'ДД.ММ.ГГГГ', 'Дата рождения')
         div.sign-in-service
             label(for='email') данные для входа в сервис
             +simple_input('email', 'email', 'Email')
             +simple_input('password', 'password', 'Пароль')
-        div.toggle
-            +simple_input('checkbox', 'agree', 'Получать спецпредложения')
-            span(class="slider")
-       +button('sign-up', 'перейти к оплате')
+        +toggle('offer', 'suggest', 'Получать спецпредложения')
+        +button('sign-up', 'перейти к оплате', 'button-purple')
+        div.account
             p Уже есть аккаунт на Toxin
-            +button('sign-in', 'войти')
+            +button('sign-in', 'войти', 'button-white')

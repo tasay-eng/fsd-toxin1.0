@@ -1,0 +1,57 @@
+// main: main.less
+@import '../../config/config.less';
+@import "../small.blocks/input/input.less";
+@import "../small.blocks/radio-button/radio-button.less";
+@import "../small.blocks/button/button.less";
+@import "../small.blocks/button/button_purple.less";
+@import "../small.blocks/button/button_white.less";
+@import "../small.blocks/toggle/toggle.less";
+.registration-form {
+  position: relative;
+  background: @white;
+  padding: 2.78% 2.08% 2.08% 2.08%;
+  width: 26.39%;
+  height: 100%;
+  align-items: baseline;
+  margin: 0 auto;
+  .flex();
+  flex-direction: column;
+  flex-wrap: wrap;
+  .form();
+
+  h1 {
+    .header_1();
+    padding-bottom: 5.53%;
+    margin: 0;
+  }
+  .sign-in-service {
+    .flex();
+    flex-direction: column;
+  }
+
+  .radio_buttons{
+    .flex();
+    flex-direction: row;
+  }
+  .complex-input{
+    .flex();
+    flex-direction: column;
+  }
+  .input-text {
+    width: 100%;
+  }
+  .account {
+    .flex();
+    flex-direction: row;
+  }
+
+  .button-purple {
+      .button_com(@white);
+      .button(@white);
+  }
+  .button-white {
+    .button_com(@purple);
+    .button(@purple);
+    width: 99px;
+  }
+}

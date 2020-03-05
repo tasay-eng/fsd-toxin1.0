@@ -1,8 +1,8 @@
 include ../small.blocks/input/input.pug
 include ../small.blocks/label/label.pug
-mixin footer()
+mixin footer(fot_class)
     - var footer_list = {'nav': ['Navigation', 'About Us', 'News', 'Support', 'Products'], 'about': ['About Us', 'Who we are', 'Our team', 'Careers', 'Investors'], 'support': ['Support', 'Documentation', 'Community', 'Get in Touch'], 'subscribe': ['Subscribe to our newsletter', 'Receive our latest news and promotions in your inbox!']}
-    footer.footer
+    footer(class= 'footer' + ' ' + fot_class)
         div.footer__info
             div(class= 'item main')
                 +label()

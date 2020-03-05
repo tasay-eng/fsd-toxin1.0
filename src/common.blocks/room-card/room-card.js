@@ -1,0 +1,1 @@
+import '../small.blocks/rating-stars/rating-stars.js';

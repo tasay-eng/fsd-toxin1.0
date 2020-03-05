@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+.lists {
+  list-style-type: none;
+}
+.room-cards {
+  display: grid;
+  grid-template-columns: 18.75%;
+  grid-template-rows: 17.85%;
+  grid-column-gap: 0.208%;
+  grid-row-gap: 0.243%;
+}
+/*# sourceMappingURL=cards-for-rooms.css.map */

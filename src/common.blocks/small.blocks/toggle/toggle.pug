@@ -1,0 +1,5 @@
+include ../checkbox/checkbox.pug
+mixin toggle(t_id, t_name, t_label)
+    label(class= 'switch')= t_label
+        +checkbox_simple(t_id, t_name)
+        span(class="slider round")

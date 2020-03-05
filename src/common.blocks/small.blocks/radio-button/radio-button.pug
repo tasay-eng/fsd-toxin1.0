@@ -1,3 +1,4 @@
-mixin radio-button(input_id, input_name, input_type)
-    label(for=input_id)= input_name
-    input(id=input_id type=input_type name=input_name)
+mixin radio-button(input_id, input_name, input_value, label)
+    div.radio-but
+        label(for=input_id)= label
+        input(id=input_id type='radio' name=input_name value= input_value)

@@ -1,11 +1,30 @@
-mixin simple_drop_down(select_id, first_option)
-    div(class= 'rail-select')
-        i(class="fas fa-chevron-down")
-        select(id= select_id name= select_id)
-            option(selected= 'selected')= first_option
-mixin drop_down(select_label, select_id, first_option)
-    div(class= 'rail-select')
-        label(for= select_id)= select_label
-        i(class="fas fa-chevron-down")
-        select(id= select_id name= select_id)
-            option(selected= 'selected')= first_option
+include ../plus-minus/plus-minus.pug
+mixin drop_down(kind, holder, d_class, label)
+    - var choices= [['спальни', 'кровати', 'ванные комнаты'], ['взрослые', 'дети', 'младенцы'], ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь']]  
+    if (kind === "comfort" ||  kind==="guests")
+        h3= label
+    div(class= 'drop-down'+d_class)
+        div.drop-field= holder
+        div(class='icon-side')
+            i(class="fas fa-chevron-down")
+        div.drop-body
+            if (kind === "comfort") 
+                each i in choices[0]  
+                    div(class="choice")= i
+                    +plus-minus()
+                
+            else if (kind === "guests") 
+                each j in choices[1] 
+                    div(class="choice")= j
+                    +plus-minus()
+                    
+            else if (kind === "add")
+                - var id_s= ['breakfast', 'desk', 'feed-chair', 's-bed', 't-v', 'moisture', 't-v', 'moisture']
+                - var n = 0
+                while n < choices.length
+                    n = n+1 
+                    +checkbox(id_s[n], 'additional', choices[2][n])                         
+            else 
+                h3= kind
+                
+        

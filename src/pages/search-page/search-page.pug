@@ -4,16 +4,19 @@ append config
     include ../../common.blocks/header/header.pug
     include ../../common.blocks/footer/footer.pug
     include ../../common.blocks/choose-options/choose-options.pug
-    include ../../common.blocks/room-card/room-card.pug
-    - pageName = 'Страница выбора номера'
-    - pageDesc = 'Страница 3'
+    include ../../common.blocks/cards-for-rooms/cards-for-rooms.pug
+    - pageName= 'Страница выбора номера'
+    - pageDesc= 'Страница 3'
+    - bodyclass= 'body-search'
+append head
+    script(type= "text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
 block header
     +header('header-main')
 block content
-    +choose-options()
-    div.room-cards
-        h1 Номера, которые мы для вас подобрали
-        - for (var i = 0; i < 12; i++)
-            +room-card()
+    div.search-container
+        +choose-options()
+        div.cards-container
+            h1 Номера, которые мы для вас подобрали
+            +cards-for-rooms()
 block footer
     +footer()

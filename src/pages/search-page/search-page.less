@@ -1,5 +1,22 @@
+// main: main.less
 @import '../../config/config.less';
 @import '../../common.blocks/header/header.less';
 @import "../../common.blocks/footer/footer.less";
 @import "../../common.blocks/choose-options/choose-options.less";
-@import "../../common.blocks/room-card/room-card.less";
+@import "../../common.blocks/cards-for-rooms/cards-for-rooms.less";
+.body-search {
+    padding: 0 9.72%;
+    .search-container {
+        padding: 2.76% 0;
+        .flex();
+        .choose-options {
+            margin-right: 5.52%;
+            .flex();
+            flex-direction: column;
+        }
+        .cards-container {
+            width: 100%;
+            margin: 0;
+        }
+}
+}

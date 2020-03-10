@@ -1,6 +1,6 @@
 mixin checkbox(input_id, input_name, input_label)
     div.checkbox
-        label(for=input_id)= input_label
-        input(class= 'check' id=input_id type='checkbox' name=input_name value= input_label)
+        label(for= input_id)= input_label
+        input(class= 'check' id= input_id type= 'checkbox' name= input_name value= input_id)
 mixin checkbox_simple(input_id, input_name)
     input(class= 'check' id=input_id type='checkbox' name=input_name value=input_name)

@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+.lists {
+  list-style-type: none;
+}
+.rail-select .select_complex {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 44px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=_common.css.map */

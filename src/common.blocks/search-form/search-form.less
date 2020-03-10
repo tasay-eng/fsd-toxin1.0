@@ -1,14 +1,12 @@
 // main: main.less
 @import '../../config/config.less';
-@import "../small.blocks/dropdown/dropdown.less";
 @import "../small.blocks/button/button.less";
 @import "../small.blocks/button/button_purple.less";
-.search-room {
+@import "../small.blocks/dropdown/_common/_common.less";
+.search-form {
   position: relative;
-  max-width: 380px;
-  max-height: 374px;
-  background: @white;
   padding: 40px 30px 30px 30px;
+  max-width: 26.39%;
   .flex();
   flex-wrap: wrap;
   .form();
@@ -18,23 +16,23 @@
     width: 84.21%;
     margin: 0;
   }
-  .rail-select {
+  .complex-input {
     padding-bottom: 20.56px;
-    width: 150px;
+    width: 45%;
+  }
 
+  .rail-select_common {
+    padding-bottom: 25.56px;
+    width: 84.21%;
     select {
-      width: 150px;
-    }
-
-    &:nth-child(4) {
-      select {
-        width: 320px;
-      }
+      width: 320px;
     }
   }
-  input {
+
+  .button-simple {
+    padding-bottom: 20.56px;
     .button_com(@white);
     .button(@white);
-    width: 320px;
+    width: 22.22%;
   }
 }

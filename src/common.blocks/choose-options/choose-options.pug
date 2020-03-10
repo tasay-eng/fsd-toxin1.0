@@ -1,9 +1,8 @@
-include ../small.blocks/checkbox/checkbox.pug
 include ../small.blocks/dropdown/dropdown.pug
 mixin choose-options()
     div.choose-options
         +input_field('date', 'date-range', '2 спальни, 2 кровати...', 'даты пребывания в отеле')
-        //+drop_down('guests', 'Сколько гостей', '_common', 'гости')
+        +drop_down('guests', 'Сколько гостей', '_common', 'Гости')
         div.oppotunities
             label= 'Checkbox Buttons'
             +checkbox('smoking', 'opportunity', 'Можно курить')
@@ -13,5 +12,5 @@ mixin choose-options()
             label= 'Доступность'
             +checkbox('corridor', 'availability', 'Широкий коридор')
             +checkbox('disabled', 'availability', 'Помощник для инвалидов')
-        //+drop_down( 'comfort', 'удобства номера', '_hidden')
-        //+drop_down('add', 'дополнительные удобства', '_hidden')
+        +drop_down('comfort', 'удобства номера', '_hidden')        
+        +drop_down('add', 'дополнительные удобства', '_hidden')

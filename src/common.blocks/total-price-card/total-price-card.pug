@@ -1,0 +1,18 @@
+include ../small.blocks/dropdown/dropdown.pug
+include ../small.blocks/button/button.pug
+mixin search-form(form_name)
+    - var total_price= {'9 990₽ х 4 суток': '39 960₽', 'Сбор за услуги: скидка 2 179₽': '0₽', 'Сбор за дополнительные услуги': '300₽', 'Итого': '38 081₽'}
+    form(class= form_name action= "url" method="post")
+        div(class= 'search-room-big')
+            div
+                img(src='#')
+                h3= 'люкс'
+            div 9 990₽ в сутки
+        +input_field('date', 'arrival', 'ДД.ММ.ГГГГ', 'Прибытие')
+        +input_field('date', 'departure', 'ДД.ММ.ГГГГ', "Выезд")
+        +drop_down('guests', 'Сколько гостей', '_common', 'Гости')
+        each service, sum in search_form_detailes
+            div
+                p= service
+                p= sum
+        +button('booking', 'забронировать', 'button-purple')

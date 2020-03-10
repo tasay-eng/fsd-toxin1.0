@@ -2,14 +2,21 @@ include ../small.blocks/button/button.pug
 include ../small.blocks/dropdown/dropdown.pug
 include ../small.blocks/label/label.pug
 mixin header()
-    - var header_options = ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation']
+    - var header_options = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
     header(class= 'header-main')
         +label()
         ul(class='header-main_item')
             each option in header_options
-                li
-                    a= option
+                if (option === 'Услуги')
+                    li
+                        +drop_down('conditions', option, "_hidden", 'aaaaa')
+                else if (option === 'Соглашения')
+                    li
+                        +drop_down('docs', option, "_hidden", "aaaaa")
+                else
+                    li
+                        a= option
             li
-                +button('login', 'LOGIN')
+                +button('login', 'LOGIN', 'button-white')
             li
-                +button('registration', 'REGISTER')
+                +button('registration', 'REGISTER', 'button-purple')

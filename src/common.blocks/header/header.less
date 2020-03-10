@@ -1,21 +1,26 @@
 // main: main.less
 @import '../../config/config.less';
 @import "../small.blocks/button/button.less";
+@import '../small.blocks/dropdown/_hidden/_hidden.less';
 .header-main {
   box-sizing: border-box;
-  max-width: 1440px;
   height: 7.78%;
-  margin: 0 9.72%;
-  padding: 15px 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   &_item {
     .toxin_label();
     &:nth-child(2) {
       width: 70%;
       margin-left: 6.94%;
       .lists();
+      .flex();
       li {
+        .rail-select_hidden {
+            max-height: 64px;
+            width: 102.3%;
+        }
         &:nth-child(7) .button-simple{
           width: 87px;
           .button_com(@purple);

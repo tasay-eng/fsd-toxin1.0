@@ -6,8 +6,8 @@ mixin drop_down(kind, holder, d_class, label)
         if (kind === 'comfort' ||  kind === 'guests')
             h3= label
         div.drop-field= holder
-        div(class='icon-side')
-            i(class="fas fa-chevron-down")
+            div(class='icon-side')
+                i(class="fas fa-chevron-down")
         div.drop-body
             if (kind === 'comfort')
                 each i in choices[0]

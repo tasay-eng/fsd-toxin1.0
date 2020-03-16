@@ -1,0 +1,10 @@
+mixin carusel-slider()
+    - var images = ['./img/card_picture1.jpg']
+    div(class="slider")
+        div(class="slider__wrapper")
+            div(class="slider__items")
+                - for(var i = 0; i < 4; i++)
+                    div(class="slider__item")
+                        img(src= images[0])
+        a(class="slider__control slider__control_prev" href="#" role="button")
+        a(class="slider__control slider__control_next" href="#" role="button")

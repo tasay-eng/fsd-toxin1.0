@@ -1,0 +1,52 @@
+//main: main.less
+@import '../../../config/config.less';
+@grad: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+.multi-range{
+    .count {
+        margin: 0 0 5px 0;
+        .flex();
+        label{
+            margin: 0 0 21px 0;
+            .header_3();
+        }
+        .amount-input {
+            top: 0;
+            width: 30%;
+            height: 12%;
+            .body_text();
+            color: @text_middle;
+        }
+    }
+
+    .ui-slider{
+        position: relative;
+        width: 100%;
+        height: 6px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        box-sizing: border-box;
+        border-radius: 3px;
+        margin: 0 0 13.56px 0; 
+        
+        &-range {
+            background: @grad;
+            height: 4px;
+        }
+
+        &-handle {
+            position: absolute;
+            background: @grad;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #FFFFFF;
+            border-radius: 10px;
+            top: -5px;
+        }
+    }
+    .describe {
+        margin: 13.56px 0 0 0;
+        font-size: 12px;
+        line-height: 14px;
+        color: @text_middle;
+    }
+}

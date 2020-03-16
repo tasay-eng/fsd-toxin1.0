@@ -1,13 +1,10 @@
 include ../small.blocks/rating-stars/rating-stars.pug
+include ../small.blocks/carusel-slider/carusel-slider.pug
 mixin room-card(card_id)
-    - var images = ['./img/card_picture1.jpg']
     div(class= 'room-card' id= card_id)
-        ul(id='lightSlider')
-            - for (var i in images)
-                li.slide
-                    img(src= images[i])
+        +carusel-slider()
         div(class= 'inform')
-            p number
-            p sum
+            p № 840
+            p 9 900₽ в сутки
             +rating-stars()
-            p come-back
+            p 65 Отзывов

@@ -1,8 +1,8 @@
 @import "../../config/config.less";
 @import "../small.blocks/rating-stars/rating-stars.less";
+@import "../small.blocks/carusel-slider/carusel-slider.less";
 .room-card{
-  width: 18.75%;
-  max-width: 271px;
+  max-width: 100%;
   box-sizing: border-box;
   .flex();
   flex-wrap: wrap;
@@ -12,10 +12,20 @@
     text-align: center;
   }
   .inform {
-    padding: 0 1.18% 1.32% 1.18%;
+    padding: 0 18px 18px 18px;
     margin: 0 auto;
     .flex();
     flex-wrap: wrap;
- 
+    .star-rating {
+      margin-top: 19px;
+      height: 20.23%;
+    }
+    p {
+      margin: 19px 0 0 0;
+      color: @text_middle;
+      &:nth-child(1){
+        .header_3();
+      }
+    }
   }
 }

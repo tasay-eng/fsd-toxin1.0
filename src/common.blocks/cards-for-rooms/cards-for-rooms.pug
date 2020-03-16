@@ -1,5 +1,7 @@
 include ../room-card/room-card.pug
 mixin cards-for-rooms()
-    div(class= "room-cards")
-        - for (var i = 0; i < 1; i++)
-            +room-card("room_13")
+    div.cards-container
+        h1 Номера, которые мы для вас подобрали
+        div(class= "dif-cards")
+            - for(var i = 0; i < 12; i++)
+                +room-card("room_"+i)

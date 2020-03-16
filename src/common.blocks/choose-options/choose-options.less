@@ -1,5 +1,31 @@
+//main: main.less
 @import "../small.blocks/checkbox/checkbox.less";
-@import "../small.blocks/dropdown/dropdown.less";
-.drop-down_common {
-    top: 140px;
-}
+@import "../small.blocks/dropdown/_hidden/_hidden.less";
+@import "../small.blocks/dropdown/_common/_common.less";
+@import "../small.blocks/slider-range/slider-range.less";
+@import '../../../node_modules/lightpick/less/lightpick.less';
+@import '../small.blocks/dropdown/datepicker/datepicker.less';
+.choose-options {
+    height: 100%;
+    .flex();
+    flex-direction: column;
+    .top {
+        top: 80.38%; 
+    }
+    .bottom {
+        top: 251.15%; 
+    }
+    label {
+        .header_3();
+    }
+    .drop-down_hidden {
+        width: 18.47%;
+        top: 284.82%; 
+        .drop-field {
+            .header_3();
+        }
+        .icon-side {
+            right: 10px;
+        }
+    }
+}    

@@ -1,10 +1,21 @@
 // main: main.less
 @import '../../config/config.less';
 @import '../room-card/room-card.less';
-.room-cards {
-    display: grid;
-    grid-template-columns: 132.52%;
-    grid-template-rows: 7.85%;
-    grid-column-gap: 0.208%;
-    grid-row-gap: 0.243%;
+.cards-container{
+    box-sizing: border-box;
+    width: 71.9%;
+    margin: 0;
+    h1 {
+        margin: 0 0 21px 0;
+    }
+    .dif-cards {
+        box-sizing: border-box;
+        max-width: 100%;
+        width: 100%;
+        height: 80%;
+        display: grid;
+        grid-template-rows: 23% 23% 23%;
+        grid-template-columns: 31.5% 31.5% 31.5%;
+        grid-gap: 1.7vw;
+    }
 }

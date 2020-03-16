@@ -1,9 +1,12 @@
 include ../small.blocks/dropdown/dropdown.pug
+include ../small.blocks/slider-range/slider-range.pug
+include ../small.blocks/dropdown/datepicker/datepicker.pug
 mixin choose-options()
     div.choose-options
-        +input_field('date', 'date-range', '2 спальни, 2 кровати...', 'даты пребывания в отеле')
-        +drop_down('guests', 'Сколько гостей', '_common', 'Гости')
-        div.oppotunities
+        +datepicker('single-picker', '19 авг - 23 авг', 'даты пребывания в отеле')
+        +drop_down('guests', 'Сколько гостей', '_common top', 'Гости')
+        +slider-range()
+        div.oppotunities 
             label= 'Checkbox Buttons'
             +checkbox('smoking', 'opportunity', 'Можно курить')
             +checkbox('pets', 'opportunity', 'Можно с питомцами')
@@ -12,5 +15,5 @@ mixin choose-options()
             label= 'Доступность'
             +checkbox('corridor', 'availability', 'Широкий коридор')
             +checkbox('disabled', 'availability', 'Помощник для инвалидов')
-        +drop_down('comfort', 'удобства номера', '_hidden')        
+        +drop_down('comfort', '2 спальни, 2 кровати...', '_common bottom', 'удобства номера')        
         +drop_down('add', 'дополнительные удобства', '_hidden')

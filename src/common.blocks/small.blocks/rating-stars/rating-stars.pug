@@ -1,7 +1,8 @@
 mixin rating-stars()
     div(class="star-rating")
         div(class="star-rating__wrap")
-            - for ( var i = 1; i <= 5; i++ )
-                input(class= "star-rating__input" id="star-rating-"+i type="radio" name="rating" value= i)
-                label(class= "star-rating__ico far fa-star" for= "star-rating-"+i title= i+" out of "+i+" stars")
+            - for ( let i = 1; i < 6; i++ )
+                label(class= "star-rating__ico far fa-star" title= i+" out of "+i+" stars")
+                    input(class= "star-rating__input" type="radio" name="rating" value= i)
+                    
     

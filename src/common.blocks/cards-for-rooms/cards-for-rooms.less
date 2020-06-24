@@ -1,21 +1,19 @@
 // main: main.less
 @import '../../config/config.less';
 @import '../room-card/room-card.less';
-.cards-container{
-    box-sizing: border-box;
-    width: 71.9%;
-    margin: 0;
+@import '../small.blocks/pagination/pagination.less';
+.cards-for-rooms{
     h1 {
         margin: 0 0 21px 0;
     }
-    .dif-cards {
+    .cards-container{
         box-sizing: border-box;
-        max-width: 100%;
-        width: 100%;
+        margin: 0;
         height: 80%;
         display: grid;
         grid-template-rows: 23% 23% 23%;
         grid-template-columns: 31.5% 31.5% 31.5%;
         grid-gap: 1.7vw;
+        transition: all 0.7s ease;
     }
 }

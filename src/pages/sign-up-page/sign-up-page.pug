@@ -5,12 +5,16 @@ append config
     include ../../common.blocks/login-form/login-form.pug
     include ../../common.blocks/registration-form/registration-form.pug
     include ../../common.blocks/footer/footer.pug
-    - pageName = 'Главная страница'
-    - pageDesc = 'Страница 7'
+    - pageName= 'Страница регистрации'
+    - pageDesc= 'Страница 6'
+    - bodyclass= 'body-sign'
+append head
+         
 block header
     +header()
 block content
-    div.wrapper
-        +registration-form('registration-form')
+    div(class= 'wrapper sign')
+        +registration-form('sign-up')
 block footer
-    +footer()
+    +footer('footer-sign')
+    script(type= "text/javascript" src= "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")

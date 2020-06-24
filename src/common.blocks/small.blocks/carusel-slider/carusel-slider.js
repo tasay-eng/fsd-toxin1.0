@@ -212,9 +212,7 @@ var slideShow = (function () {
     }
   }());
 const cards = document.querySelectorAll('.room-card')
-console.log(cards)
 for (let c of cards){
   let card_id = '#'+c.id
-  console.log(card_id)
   slideShow(card_id,'.slider');
 }

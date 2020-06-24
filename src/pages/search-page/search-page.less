@@ -1,5 +1,6 @@
 // main: main.less
 @import '../../config/config.less';
+@import '../../../node_modules/lightpick/css/lightpick.css';
 @import '../../common.blocks/header/header.less';
 @import "../../common.blocks/footer/footer.less";
 @import "../../common.blocks/choose-options/choose-options.less";
@@ -7,16 +8,27 @@
 .body-search {
     padding: 0 9.72%;
     .search-container {
-        padding: 2.76% 0;
+        margin: 2.76% 0 0 0;
+        height: 1375px;
         .flex();
         .choose-options {
+            width: 22.93%;
+            height: 56.82%;
             margin-right: 5.52%;
-            .flex();
             flex-direction: column;
+            box-sizing: border-box;
+            .complex-input {
+                width: 100%;
+                input{
+                    width: 100%;
+                }
+            }
         }
-        .cards-container {
-            width: 100%;
-            margin: 0;
+        .cards-for-rooms{
+            width: 71.91%;
         }
-}
+    }
+footer {
+    bottom: -230%;  
+}   
 }

@@ -9,14 +9,14 @@ mixin header()
             each option in header_options
                 if (option === 'Услуги')
                     li
-                        +drop_down('conditions', option, "_hidden", 'aaaaa')
+                        +drop_down('conditions', option, "_hidden")
                 else if (option === 'Соглашения')
                     li
-                        +drop_down('docs', option, "_hidden", "aaaaa")
+                        +drop_down('docs', option, "_hidden")
                 else
                     li
                         a= option
             li
-                +button('login', 'LOGIN', 'button-white')
+                +button('login', 'LOGIN', '_white')
             li
-                +button('registration', 'REGISTER', 'button-purple')
+                +button('registration', 'REGISTER', '_purple')

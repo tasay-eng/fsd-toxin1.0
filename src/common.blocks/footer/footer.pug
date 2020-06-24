@@ -2,20 +2,20 @@ include ../small.blocks/input/input.pug
 include ../small.blocks/label/label.pug
 mixin footer(fot_class)
     - var footer_list = {'nav': ['Navigation', 'About Us', 'News', 'Support', 'Products'], 'about': ['About Us', 'Who we are', 'Our team', 'Careers', 'Investors'], 'support': ['Support', 'Documentation', 'Community', 'Get in Touch'], 'subscribe': ['Subscribe to our newsletter', 'Receive our latest news and promotions in your inbox!']}
-    footer(class= 'footer' + ' ' + fot_class)
+    footer(class= 'footer'+' '+fot_class)
         div.footer__info
             div(class= 'item main')
                 +label()
                 p
                     | Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-            for val, key in footer_list
+            for v, key in footer_list
                 div(class= 'item' + ' ' + key)
                     ul
                         li
-                            h3= val[0]
-                        - for ( var i = 1; i < val.length; i++ )
+                            h3= v[0]
+                        - for ( var i = 1; i < v.length; i++ )
                             li
-                                a= val[i]
+                                a= v[i]
                             if ((key === 'subscribe') && (i === 1))
                                 li
                                     +simple_input('email', 'subscribe', 'Your email address')

@@ -1,3 +1,6 @@
+import '../../../node_modules/lightpick/lightpick.js'
 import '../../common.blocks/header/header.js'
 import '../../common.blocks/footer/footer.js'
-import '../../common.blocks/login-form/login-form.js'
+import '../../common.blocks/search-form/search-form.js'
+import '../../main.less'
+import './landing-page.less'

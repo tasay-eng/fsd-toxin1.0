@@ -1,0 +1,5 @@
+import '../../common.blocks/header/header.js'
+import '../../common.blocks/footer/footer.js'
+import '../../common.blocks/registration-form/registration-form.js'
+import '../../main.less'
+import './sign-up-page.less'

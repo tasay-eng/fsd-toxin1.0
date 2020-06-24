@@ -1,10 +1,10 @@
 include ../small.blocks/rating-stars/rating-stars.pug
 include ../small.blocks/carusel-slider/carusel-slider.pug
-mixin room-card(card_id)
-    div(class= 'room-card' id= card_id)
+mixin room-card(card_id, num)
+    div(class='room-card'+' '+class_card id=card_id data-num=num)
         +carusel-slider()
         div(class= 'inform')
-            p № 840
-            p 9 900₽ в сутки
+            p= "№"+ 8 * num
+            p= 6000 + 100 * num + "Р" + "в сутки"
             +rating-stars()
             p 65 Отзывов

@@ -1,6 +1,6 @@
-mixin datepicker(kind, holder, label)
+mixin datepicker(kind, holder, label, number)
     div.calendar
         h3= label
         input(id=kind type='text' value= holder)
-        div(class='icon-side')
+        div(class='icon-side icon-'+number)
                 i(class="fas fa-chevron-down")

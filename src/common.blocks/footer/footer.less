@@ -4,8 +4,9 @@
 .footer {
   margin: 0 auto;
   .container(absolute);
-  margin: 0 auto;
-  width: 80.55%;
+  left: 5%;
+  right: 5%;
+  width: 85.55%;
   &__info {
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
     .flex();
@@ -15,7 +16,7 @@
         .header_3();
       }
       &:nth-child(1) {
-        flex: 2.4 108px;
+        flex: 2.7 108px;
       }
       &:nth-child(1) {
         margin-right: 40px;
@@ -26,13 +27,19 @@
       }
       &:nth-child(4){
         flex: 1.38 108px;
-        margin-right: 92px;
+        margin-right: 62px;
         margin-left: 51px;
       }
       &:nth-child(5) {
         flex: 2.4 108px;
         .input-text {
+          .inp_sel();
           width: 260px;
+        }
+        .fas {
+          position: absolute;
+          right: 1.5%;
+          bottom: 53%;
         }
       }
       ul {
@@ -58,7 +65,6 @@
       &:nth-child(2){
         list-style-type: none;
         width: 112px;
-        .clear();
         .flex();
         li {
           i {

@@ -6,18 +6,40 @@
   position: relative;
   padding: 40px 30px 30px 30px;
   max-width: 26.39%;
+  height: 45%;
   .flex();
   flex-wrap: wrap;
   .form();
   h1 {
     .header_1();
     padding-bottom: 5.53%;
-    width: 84.21%;
     margin: 0;
   }
   .complex-input {
     padding-bottom: 20.56px;
     width: 45%;
+  }
+  .calendar{
+    width: 45%;
+    .icon-side{
+      width: 23px;
+      position: absolute;
+      top: 195px;
+    }
+    .icon-1{
+      left: 38%;
+    }
+    .icon-2{
+      left: 84%;
+    }
+  }
+  .drop-down_common{
+    position: relative;
+    width: 100%;
+  }
+  #first-picker, #second-picker{
+    .inp_sel();
+    width: 100%;
   }
 
   .rail-select_common {
@@ -28,10 +50,12 @@
     }
   }
 
-  .button-simple {
+  .button_purple {
     padding-bottom: 20.56px;
     .button_com(@white);
     .button(@white);
-    width: 22.22%;
+    width: 115%;
+    margin-top: 5%;
+    padding: 0;
   }
 }

@@ -4,7 +4,7 @@ include ../small.blocks/dropdown/datepicker/datepicker.pug
 mixin search-form(form_class)
     form(class= 'search-form'+' '+form_class action= "url" method="post")
         h1 Найдём номера под ваши пожелания
-        +datepicker('first-picker','19.08.2019', 'прибытие')
-        +datepicker('second-picker', '23.08.2019', 'выезд')
+        +datepicker('first-picker','19.08.2019', 'прибытие', 1)
+        +datepicker('second-picker', '23.08.2019', 'выезд', 2)
         +drop_down('guests', 'Сколько гостей', '_common', "Гости")
         +button('choose-room', 'подобрать номер', '_purple')

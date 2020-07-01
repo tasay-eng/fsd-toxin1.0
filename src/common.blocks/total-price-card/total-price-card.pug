@@ -4,11 +4,11 @@ include ../small.blocks/dropdown/datepicker/datepicker.pug
 mixin total-price-card()
     - var total_price= {'9 990₽ х 4 суток': '39 960₽', 'Сбор за услуги: скидка 2 179₽': '0₽', 'Сбор за дополнительные услуги': '300₽', 'Итого': '38 081₽'}
     form(class= 'total-price' action= "url" method="post")
-        +datepicker('first-picker','19.08.2019', 'прибытие')
-        +datepicker('second-picker', '23.08.2019', 'выезд')
+        +datepicker('first-picker','19.08.2019', 'прибытие', 1)
+        +datepicker('second-picker', '23.08.2019', 'выезд', 2)
         +drop_down('guests', 'Сколько гостей', '_common', "Гости")
         each service, sum in total_price
-            div
+            div.prises-custom
                 p= service
                 p= sum
-        +button('booking', 'забронировать', 'button-purple')
+        +button('booking', 'забронировать', '_purple')

@@ -1,0 +1,48 @@
+@import "../small.blocks/button/button_purple.less";
+@import "../small.blocks/dropdown/_common/_common.less";
+@import '../small.blocks/dropdown/datepicker/datepicker.less';
+.total-price{
+    position: relative;
+    padding: 40px 30px 30px 30px;
+    max-width: 26.39%;
+    height: 45%;
+    .flex();
+    flex-wrap: wrap;
+    .form();
+    width: 30%;
+    .calendar{
+        width: 45%;
+        .icon-side{
+          width: 23px;
+          position: absolute;
+          top: 20%;
+        }
+        .icon-1{
+          left: 38%;
+        }
+        .icon-2{
+          left: 84%;
+        }
+      }
+    .drop-down_common{
+        position: relative;
+        width: 100%;
+    }
+    #first-picker, #second-picker{
+        .inp_sel();
+        width: 100%;
+    }
+    .prises-custom{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .button_purple {
+        padding-bottom: 20.56px;
+        .button_com(@white);
+        .button(@white);
+        width: 115%;
+        margin-top: 5%;
+        padding: 0;
+    }
+}

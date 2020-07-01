@@ -1,6 +1,31 @@
 //main: main.less
-.donut-diagram {
-    position: absolute;
-    bottom: -40%;
-    right: 50%;
+.donut{
+    width: 25%;
+    box-sizing: border-box;
+    .header_2{
+        margin-left: 10%;
+    }
+    .donut-diagram {
+        display: flex;
+        justify-content: flex-start;
+        #d-legend{
+            margin-top: 8%;
+            height: 6%;
+            .round_canv{
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                margin: 10px 6px 0 0;
+            }
+        }
+        .legend_item{
+            display: flex;
+            margin-top: 5px;
+        }
+        #diagram{
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
 }

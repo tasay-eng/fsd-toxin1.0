@@ -1,4 +1,6 @@
-mixin donut-diagram() 
-    div.donut-diagram
-        canvas(id="diagram")
-        div(id="d-legend")
+mixin donut-diagram(text) 
+    div.donut
+        h2(class= 'header_2')= text
+        div.donut-diagram
+            canvas(id="diagram")
+            div(id="d-legend")

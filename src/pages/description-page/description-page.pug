@@ -4,6 +4,7 @@ append config
     include ../../common.blocks/header/header.pug
     include ../../common.blocks/small.blocks/donut-diagram/donut-diagram.pug
     include ../../common.blocks/total-price-card/total-price-card.pug
+    include ../../common.blocks/room_details/room_details.pug
     include ../../common.blocks/footer/footer.pug
     - pageName= 'Страница описания номера'
     - pageDesc= 'Страница 11'
@@ -12,9 +13,11 @@ append head
 block header
     +header()
 block content
-    div(class= 'wrapper describe')
-    +donut-diagram()
-    +total-price-card()
+    div(class= 'describe')
+    div(class= 'wrapper_descr')
+        +room_details()
+        +donut-diagram('Впечатления от номера')
+        +total-price-card()
 block footer
     +footer('foot-land')
     script(type= "text/javascript" src= "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")

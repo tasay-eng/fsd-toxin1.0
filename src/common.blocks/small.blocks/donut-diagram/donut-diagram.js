@@ -68,7 +68,7 @@ function Piechart(options){
             color_index = 0;
             let legendHTML = "";
             for (categ in this.options.data){
-                legendHTML += "<div><span style='display:inline-block;width:20px;background-color:"+this.colors[color_index++]+";'>&nbsp;</span> "+categ+"</div>";
+                legendHTML += "<div class='legend_item'><div class='round_canv' style='background-color:"+this.colors[color_index++]+";'>&nbsp;</div>"+categ+"</div>";
             }
             this.options.legend.innerHTML = legendHTML;
         }
